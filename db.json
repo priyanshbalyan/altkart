@@ -1,0 +1,9 @@
+{
+    "users": [{
+        "email": "priyanshbalyan@gmail.com",
+        "password": "1234",
+        "fullname": "Priyansh",
+        "otp_key": "MRHHI2LZNYYFIYTUGNBTCK2MNFGEKRZR",
+        "otp_enabled": false
+    }]
+}
