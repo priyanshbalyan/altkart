@@ -7,29 +7,19 @@
 
 
                 </div>
+                
                 <div class="col l3 s12">
-                    <h5 class="white-text">Settings</h5>
+                    <h5 class="white-text">Links</h5>
                     <ul>
                         <li><a class="white-text" href="/privacy">Privacy Policy</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
-                    </ul>
-                </div>
-                <div class="col l3 s12">
-                    <h5 class="white-text">Connect</h5>
-                    <ul>
-                        <li><a class="white-text" href="#!">Link 1</a></li>
-                        <li><a class="white-text" href="#!">Link 2</a></li>
-                        <li><a class="white-text" href="#!">Link 3</a></li>
-                        <li><a class="white-text" href="#!">Link 4</a></li>
+                        <li><a class="white-text" href="#!">Terms and Conditions</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
             <div class="container">
-                Made by <a class="brown-text text-lighten-3" href="http://materializecss.com">Materialize</a>
+                
             </div>
         </div>
     </footer>
@@ -44,11 +34,13 @@
             M.AutoInit();
         });
 
-        let message = "<%= message %>";
-        if(message){
+        array = <%- JSON.stringify(locals.messages) %>;
+        array.forEach(a => {
             M.toast({
-                html: "<b>" + message + "</b>",
-                classes: "rounded"
+                html: "<b>" + a[0] + "</b>",
+                classes: a[1]+" rounded"
             });
-        }
+            <%- removeMessages() %>
+        });
+
     </script>
