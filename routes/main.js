@@ -40,8 +40,11 @@ mainRouter.post('/login', (req, res, next) => {
             req.session.user = found.email;
             req.session.fullname = found.fullname;
             req.session.isAuthenticated = true;
-            if (found.otp_enabled)
+            if (found.otp_enabled) {
                 req.session.otp_key = found.otp_key
+                res.locals.messages.push(["Enter 2FA code to verify.", "black"]);
+                return res.redirect('/authenticate');
+            }
             res.locals.messages.push(["Logged in", "black"]);
             return res.redirect('/dashboard');
         }
@@ -91,6 +94,10 @@ mainRouter.get('/contactus', (req, res, next) => {
 
 mainRouter.get('/privacy', (req, res, next) => {
     res.render('privacy', { message: "" });
+});
+
+mainRouter.get('/terms', (req, res, next) => {
+    res.render('terms', { message: "" });
 });
 
 mainRouter.get('/logout', (req, res, next) => {

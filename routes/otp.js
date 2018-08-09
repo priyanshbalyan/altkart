@@ -32,7 +32,7 @@ otpRouter.post('/authenticate', (req, res, next) => {
         return res.redirect('/dashboard');
     }
     res.locals.messages.push(["Invalid 2FA code.", "red"]);
-    return res.redirect('/2fa/authenticate');
+    return res.redirect('/authenticate');
 });
 
 otpRouter.post('/enable', isAuthenticated, (req, res, next) => {
