@@ -21,45 +21,93 @@
             "email": "sharvik100@gmail.com",
             "password": "$2a$08$WJDXvlaRQcuzj8Vh6JhSfuodj4aZHQu8hYSXUGfV6Ba/2S9o63Ogy",
             "fullname": "Jayesh Patel",
-            "otp_enabled": true,
+            "otp_enabled": false,
             "wallet": [{
+                    "name": "Bitcoin",
                     "currency": "BTC",
                     "value": "12",
-                    "quantity": "",
+                    "quantity": "12",
                     "address": " 1JcAoFP7Q2PtjrTYupqmfzxpCMC398NjFu"
                 },
                 {
-                    "currency": "STEAM",
+                    "name": "Steem",
+                    "currency": "STEEM",
                     "value": "11.23",
                     "quantity": "67315.950920",
                     "address": "altkart_1"
                 },
                 {
+                    "name": "Strat",
                     "currency": "STRAT",
                     "value": "14.189",
                     "quantity": "53264.932489",
                     "address": "SNaNU4Qt5Uh2n1tMoYamHUZ3DqrdDaxjRs"
                 },
                 {
+                    "name": "Ethereum",
                     "currency": "ETH",
                     "value": "5.2347",
                     "quantity": "91.89352",
                     "address": "0x62490b3526DC3F485Bd19eFbd1C9Aff640A51a4d"
                 },
                 {
+                    "name": "Ethereum Classic",
                     "currency": "ETC",
                     "value": "8.2356",
                     "quantity": "3466.24936709",
                     "address": "0xc038134a78f39103acdfaA24e49c1F999aCC900a"
                 },
                 {
+                    "name": "Worldwide Asset Exchange",
                     "currency": "WAX",
                     "value": "6.3597",
                     "quantity": "25676.12721091",
                     "address": "Wallet is not available"
                 }
             ],
-            "deposit_history": [],
+            "deposit_history": [{
+                    "name": "Bitcoin",
+                    "currency": "BTC",
+                    "value": "12",
+                    "quantity": "12",
+                    "date": "11/11/2017"
+                },
+                {
+                    "name": "Steem",
+                    "currency": "STEEM",
+                    "value": "11.23",
+                    "quantity": "67315.950920",
+                    "date": "18/11/2017"
+                },
+                {
+                    "name": "Strat",
+                    "currency": "STRAT",
+                    "value": "14.189",
+                    "quantity": "53264.932489",
+                    "date": "29/11/2017"
+                },
+                {
+                    "name": "Ethereum",
+                    "currency": "ETH",
+                    "value": "5.2347",
+                    "quantity": "91.89352",
+                    "date": "12/12/2017"
+                },
+                {
+                    "name": "Ethereum Classic",
+                    "currency": "ETC",
+                    "value": "8.2356",
+                    "quantity": "3466.24936709",
+                    "date": "23/01/2018"
+                },
+                {
+                    "name": "Worldwide Asset Exchange",
+                    "currency": "WAX",
+                    "value": "6.3597",
+                    "quantity": "25676.12721091",
+                    "date": "26/01/2018"
+                }
+            ],
             "otp_key": "NRBTAQZYNFRWWNSIG4YHM5CJO5YTO43E"
         },
         {
@@ -68,24 +116,28 @@
             "fullname": "Nathubha Gondalwala",
             "otp_enabled": true,
             "wallet": [{
+                    "name": "Ripple",
                     "currency": "XRP",
                     "value": "18.71848271",
                     "quantity": "344880",
                     "address": "rMuoSbCKTNrAuCnrxK39kkfe1cfuEH7q41"
                 },
                 {
+                    "name": "Siacoin",
                     "currency": "SC",
                     "value": "8.89768875",
                     "quantity": "9150000",
                     "address": "314b138146710e03efec8073b76886a9dd2ea000a063948b36fe1eb2405d75ad845a39e3b1dc"
                 },
                 {
+                    "name": "Cardana",
                     "currency": "ADA",
                     "value": "5.15645900",
                     "quantity": "280000",
                     "address": "DdzFFzCqrht31EmmQZ2gTLBqZGfrFs2bTzZbxDksgtdFZ2xBQYufwmVh8vq3b8bTfaaaEgupo3Uin1tmE6wqdxT4YTQ6mG6W3nvgPJqE"
                 },
                 {
+                    "name": "Basic Attention Token",
                     "currency": "BAT",
                     "value": "5.8273600",
                     "quantity": "159955.74023",
@@ -93,21 +145,25 @@
                 }
             ],
             "deposit_history": [{
+                    "name": "Ripple",
                     "date": "24/12/2017",
                     "currency": "XRP",
                     "quantity": "344880"
                 },
                 {
+                    "name": "Siacoin",
                     "date": "04/01/2018",
                     "currency": "SC",
                     "quantity": "9150000"
                 },
                 {
+                    "name": "Basic Attention Token",
                     "date": "05/01/2018",
                     "currency": "BAT",
                     "quantity": "159955.74023"
                 },
                 {
+                    "name": "Cardana",
                     "date": "12/01/2018",
                     "currency": "ADA",
                     "quantity": "280000"

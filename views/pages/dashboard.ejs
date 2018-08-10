@@ -51,7 +51,7 @@
     </div>
 
 
-    <div class="container">
+    <div style="margin-left:10px;margin-right:10px">
         <div class="section">
 
 
@@ -78,13 +78,13 @@
                 </div>
                 <div id="tab1" class="col s12">
                     <h3 class="center"></h3>
-                    <table class="striped">
+                    <table class="striped responsive-table">
                         <thead>
-                            <tr><th>Currency</th><th>Total Amount</th><th>Current BTC Value</th></tr>
+                            <tr><th>Currency Name</th><th>Symbol</th><th>Available Amount</th><th>Reserved Amount</th><th>Total Amount</th><th>Current BTC Value</th></tr>
                         </thead>
                         <tbody>
                             <% for(let i=0; i<data.wallet.length; i++) { %>
-                                <tr><td><%= data.wallet[i].currency %></td><td><%= data.wallet[i].quantity %></td><td><%= data.wallet[i].value %></td><td><button class="btn modal-trigger" href="#modal<%= i %>">Deposit</button>&nbsp;<button class="btn modal-trigger" href="#modal-withdrawl">Withdrawl</button>
+                                <tr><td><%= data.wallet[i].name %></td><td><%= data.wallet[i].currency %></td><td><%= data.wallet[i].quantity%></td><td>0.00000</td><td><%= data.wallet[i].quantity %></td><td><%= data.wallet[i].value %></td><td><button class="btn modal-trigger" href="#modal<%= i %>">Deposit</button>&nbsp;<button class="btn modal-trigger" href="#modal-withdrawl">Withdrawl</button>
                                 <div id="modal<%= i %>" class="modal">
                                 <div class="modal-content">
                                     <h4>Address</h4>
@@ -103,11 +103,11 @@
                     <h3 class="center"></h3>
                     <table class="striped">
                         <thead>
-                            <tr><th>Currency</th><th>Quantity</th><th>Date of deposit</th></tr>
+                            <tr><th>Currency Name</th><th>Symbol</th><th>Amount</th><th>Quantity</th><th>Date of deposit</th></tr>
                         </thead>
                         <tbody>
                             <% for(let i=0 ; i<data.deposit_history.length; i++){ %>
-                            <tr><td><%= data.deposit_history[i].currency %></td><td><%= data.deposit_history[i].quantity %></td><td><%= data.deposit_history[i].date %></td></tr>
+                            <tr><td><%= data.deposit_history[i].name %></td><td><%= data.deposit_history[i].currency %></td><td><%= data.deposit_history[i].value %></td><td><%= data.deposit_history[i].quantity %></td><td><%= data.deposit_history[i].date %></td></tr>
                             <% } %>
                         </tbody>
                     </table>
@@ -124,47 +124,90 @@
                     </table>
                 </div>
                 <div id="tab4" class="col s12">
+                    <div class="container">
+                    
                     <div class="row">
-                        <h5>KYC</h5>
-                        <div class="col s4">
-                            <div class="card">
-                                <div class="card-content">
-                                    <span class="card-title">No Verification</span>
-                                    <p>&nbsp;</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">$0</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col s4">
-                            <div class="card">
-                                <div class="card-content">
-                                    <span class="card-title">KYC Verification</span>
-                                    <p>In progress</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">$500</a>
-                                </div>
-                            </div>   
-                        </div>
-                        <div class="col s4">
-                            <div class="card">
-                                <div class="card-content">
-                                    <span class="card-title">Physical Verification</span>
-                                    <p>Can be done after KYC verification</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">$25000</a>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                    <div class="row">
                     <!-- Switch -->
-                        <h5>Two-Factor Authentication Status : <%= data.otp_enabled?"Enabled":"Disabled" %></h5>
-                        <%- data.otp_enabled?'<button class="btn" onclick="disabletwofa()" id="btn">DISABLE 2FA</button><div id="disable"></div>':'<button class="btn" onclick="twofa()" id="btn">Enable 2FA</button><div id="secretkey"></div>' %>
-                        
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Two-Factor Authentication</div>
+                            <div class="collapsible-body">
+                                <h5>Two-Factor Authentication Status : <%= data.otp_enabled?"Enabled":"Disabled" %></h5>
+                                <%- data.otp_enabled?'<button class="btn" onclick="disabletwofa()" id="btn">DISABLE 2FA</button><div id="disable"></div>':'<button class="btn" onclick="twofa()" id="btn">Enable 2FA</button><div id="secretkey"></div>' %>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">place</i>KYC</div>
+                            <div class="collapsible-body">
+                                    <div class="row">
+                                <h5>KYC</h5>
+                                <div class="col s4">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <span class="card-title">No Verification</span>
+                                            <p>&nbsp;</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a href="#">$0</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col s4">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <span class="card-title">KYC Verification</span>
+                                            <p>In progress</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a href="#">$500</a>
+                                        </div>
+                                    </div>   
+                                </div>
+                                <div class="col s4">
+                                    <div class="card">
+                                        <div class="card-content">
+                                            <span class="card-title">Physical Verification</span>
+                                            <p>Can be done after KYC verification</p>
+                                        </div>
+                                        <div class="card-action">
+                                            <a href="#">$25000</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">whatshot</i>Reset Password</div>
+                            <div class="collapsible-body">
+                                <div class="input-field">
+                                    <input type="password" name="password" />
+                                    <label for="password">Old Password</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" name="password" />
+                                    <label for="password">New Password</label>
+                                </div>
+                                <div class="input-field">
+                                    <input type="password" name="password" />
+                                    <label for="password">Confirm new password</label>
+                                </div>
+                                <button class="btn">Change Password</button>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">access_alarm</i>Notifications</div>
+                            <div class="collapsible-body">
+                                <p>
+                                    <label>
+                                        <input type="checkbox" />
+                                        <span>Enable Notifications</span>
+                                    </label>
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
 </div>
