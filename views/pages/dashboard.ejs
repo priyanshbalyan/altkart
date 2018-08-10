@@ -54,23 +54,12 @@
     <div style="margin-left:10px;margin-right:10px">
         <div class="section">
 
-
-            <div id="modal-withdrawl" class="modal">
-                <div class="modal-content">
-                    <h4>KYC Pending</h4>
-                </div>
-                <div class="modal-footer">
-                    <button class="modal-close waves-effect waves-green btn-flat">Close</button>
-                </div>
-                
-            </div>
-
             
             <!--   Icon Section   -->
             <div class="row" style="min-height:600px">
                 <div class="col s12">
                     <ul class="tabs tabs-fixed-width">
-                        <li class="tab col s3"><a class="active" href="#tab1">Holdings</a></li>
+                        <li class="tab col s3"><a class="active" href="#tab1">Balances</a></li>
                         <li class="tab col s3"><a href="#tab2">Deposit History</a></li>
                         <li class="tab col s3"><a href="#tab3">Withdrawl History</a></li>
                         <li class="tab col s3"><a href="#tab4">Settings</a></li>
@@ -84,7 +73,7 @@
                         </thead>
                         <tbody>
                             <% for(let i=0; i<data.wallet.length; i++) { %>
-                                <tr><td><%= data.wallet[i].name %></td><td><%= data.wallet[i].currency %></td><td><%= data.wallet[i].quantity%></td><td>0.00000</td><td><%= data.wallet[i].quantity %></td><td><%= data.wallet[i].value %></td><td><button class="btn modal-trigger" href="#modal<%= i %>">Deposit</button>&nbsp;<button class="btn modal-trigger" href="#modal-withdrawl">Withdrawl</button>
+                                <tr><td><%= data.wallet[i].name %></td><td><%= data.wallet[i].currency %></td><td><%= data.wallet[i].quantity%></td><td>0.0000</td><td><%= data.wallet[i].quantity %></td><td><%= data.wallet[i].value %></td><td><button class="btn modal-trigger" href="#modal<%= i %>">Deposit</button>&nbsp;<button class="btn modal-trigger" href="#modal-withdrawl<%= i %>">Withdrawl</button>
                                 <div id="modal<%= i %>" class="modal">
                                 <div class="modal-content">
                                     <h4>Address</h4>
@@ -93,7 +82,31 @@
                                 <div class="modal-footer">
                                     <button class="modal-close waves-effect waves-green btn-flat">Close</button>
                                 </div>
-                                </div></td></tr>
+                                </div>
+                                <div id="modal-withdrawl<%= i %>" class="modal">
+                                    <div class="modal-content" id="content<%= i %>">
+                                        <h4><%= data.wallet[i].currency %></h4>
+                                        <div class="input-field">
+                                            <input type="text" id="textwithdrawl<%= i %>" name="withdrawl<%= i %>"/>
+                                            <label for="withdrawl<%= i %>">Enter withdrawl address</label>
+                                        </div>
+                                        <div class="input-field">
+                                            <input type="text" id="textaddress<%= i %>" name="address<%= i %>"/>
+                                            <label for="address<%= i %>">Enter withdrawl amount</label>
+                                        </div>
+                                        <button class="btn" onclick="clk<%= i %>()" name="<%= i %>">Create Withdrawl Request</button>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="modal-close waves-effect waves-green btn-flat">Close</button>
+                                    </div>
+                                    <script>
+                                        function clk<%= i %>(){
+                                            if($('#textwithdrawl<%= i %>').val != "" && $('#textaddress<%= i %>').val() != "")
+                                                $('#content<%= i %>').html("<h4>Your KYC is still pending!</h4>")
+                                        }
+                                    </script>
+                                </div>
+                                </td></tr>
                                 
                             <% } %>
                         </tbody>
@@ -253,6 +266,7 @@
         function disabletwofa(){
             $('#disable').html("<form method='POST' action='/2fa/disable'><input type='text' placeholder='Enter OTP to disable 2FA' name='disableotp' /></form>");
         }
+
     </script>
 </body>
 

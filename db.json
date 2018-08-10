@@ -25,86 +25,86 @@
             "wallet": [{
                     "name": "Bitcoin",
                     "currency": "BTC",
-                    "value": "12",
-                    "quantity": "12",
+                    "value": "12.0000",
+                    "quantity": "12.0000",
                     "address": " 1JcAoFP7Q2PtjrTYupqmfzxpCMC398NjFu"
                 },
                 {
                     "name": "Steem",
                     "currency": "STEEM",
-                    "value": "11.23",
-                    "quantity": "67315.950920",
+                    "value": "11.2300",
+                    "quantity": "67315.9509",
                     "address": "altkart_1"
                 },
                 {
-                    "name": "Strat",
+                    "name": "Stratis",
                     "currency": "STRAT",
-                    "value": "14.189",
-                    "quantity": "53264.932489",
+                    "value": "14.1890",
+                    "quantity": "53264.9324",
                     "address": "SNaNU4Qt5Uh2n1tMoYamHUZ3DqrdDaxjRs"
                 },
                 {
                     "name": "Ethereum",
                     "currency": "ETH",
                     "value": "5.2347",
-                    "quantity": "91.89352",
+                    "quantity": "91.8935",
                     "address": "0x62490b3526DC3F485Bd19eFbd1C9Aff640A51a4d"
                 },
                 {
                     "name": "Ethereum Classic",
                     "currency": "ETC",
                     "value": "8.2356",
-                    "quantity": "3466.24936709",
+                    "quantity": "3466.2493",
                     "address": "0xc038134a78f39103acdfaA24e49c1F999aCC900a"
                 },
                 {
                     "name": "Worldwide Asset Exchange",
                     "currency": "WAX",
                     "value": "6.3597",
-                    "quantity": "25676.12721091",
+                    "quantity": "25676.1272",
                     "address": "Wallet is not available"
                 }
             ],
             "deposit_history": [{
                     "name": "Bitcoin",
                     "currency": "BTC",
-                    "value": "12",
-                    "quantity": "12",
+                    "value": "12.0000",
+                    "quantity": "12.0000",
                     "date": "11/11/2017"
                 },
                 {
                     "name": "Steem",
                     "currency": "STEEM",
-                    "value": "11.23",
-                    "quantity": "67315.950920",
+                    "value": "11.2300",
+                    "quantity": "67315.9509",
                     "date": "18/11/2017"
                 },
                 {
-                    "name": "Strat",
+                    "name": "Stratis",
                     "currency": "STRAT",
-                    "value": "14.189",
-                    "quantity": "53264.932489",
+                    "value": "14.1890",
+                    "quantity": "53264.9324",
                     "date": "29/11/2017"
                 },
                 {
                     "name": "Ethereum",
                     "currency": "ETH",
                     "value": "5.2347",
-                    "quantity": "91.89352",
+                    "quantity": "91.8935",
                     "date": "12/12/2017"
                 },
                 {
                     "name": "Ethereum Classic",
                     "currency": "ETC",
                     "value": "8.2356",
-                    "quantity": "3466.24936709",
+                    "quantity": "3466.2493",
                     "date": "23/01/2018"
                 },
                 {
                     "name": "Worldwide Asset Exchange",
                     "currency": "WAX",
                     "value": "6.3597",
-                    "quantity": "25676.12721091",
+                    "quantity": "25676.1272",
                     "date": "26/01/2018"
                 }
             ],
@@ -118,29 +118,29 @@
             "wallet": [{
                     "name": "Ripple",
                     "currency": "XRP",
-                    "value": "18.71848271",
+                    "value": "18.7184",
                     "quantity": "344880",
                     "address": "rMuoSbCKTNrAuCnrxK39kkfe1cfuEH7q41"
                 },
                 {
                     "name": "Siacoin",
                     "currency": "SC",
-                    "value": "8.89768875",
+                    "value": "8.8976",
                     "quantity": "9150000",
                     "address": "314b138146710e03efec8073b76886a9dd2ea000a063948b36fe1eb2405d75ad845a39e3b1dc"
                 },
                 {
                     "name": "Cardana",
                     "currency": "ADA",
-                    "value": "5.15645900",
+                    "value": "5.1564",
                     "quantity": "280000",
                     "address": "DdzFFzCqrht31EmmQZ2gTLBqZGfrFs2bTzZbxDksgtdFZ2xBQYufwmVh8vq3b8bTfaaaEgupo3Uin1tmE6wqdxT4YTQ6mG6W3nvgPJqE"
                 },
                 {
                     "name": "Basic Attention Token",
                     "currency": "BAT",
-                    "value": "5.8273600",
-                    "quantity": "159955.74023",
+                    "value": "5.8273",
+                    "quantity": "159955.7402",
                     "address": "0x62490b3526DC3F485Bd19eFbd1C9Aff640A51a4d"
                 }
             ],
@@ -160,10 +160,10 @@
                     "name": "Basic Attention Token",
                     "date": "05/01/2018",
                     "currency": "BAT",
-                    "quantity": "159955.74023"
+                    "quantity": "159955.7402"
                 },
                 {
-                    "name": "Cardana",
+                    "name": "Cardano",
                     "date": "12/01/2018",
                     "currency": "ADA",
                     "quantity": "280000"
