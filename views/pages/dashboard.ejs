@@ -54,6 +54,16 @@
     <div class="container">
         <div class="section">
 
+
+            <div id="modal1" class="modal">
+                <div class="modal-content">
+                    <h4>KYC Pending</h4>
+                </div>
+                <div class="modal-footer">
+                    <button class="modal-close waves-effect waves-green btn-flat">CLose</button>
+                </div>
+                
+            </div>
             
             <!--   Icon Section   -->
             <div class="row" style="min-height:600px">
@@ -72,10 +82,10 @@
                             <tr><th>Currency</th><th>Total Amount</th><th>Current BTC Value</th></tr>
                         </thead>
                         <tbody>
-                            <tr><td>XRP</td><td>344880</td><td>18.71848271</td><td><button class="btn">Deposit</button>&nbsp;<button class="btn">Withdrawl</button></td></tr>
-                            <tr><td>SC</td><td>9150000</td><td>8.89768875</td><td><button class="btn">Deposit</button>&nbsp;<button class="btn">Withdrawl</button></td></tr>
-                            <tr><td>ADA</td><td>280000</td><td>5.15645900</td><td><button class="btn">Deposit</button>&nbsp;<button class="btn">Withdrawl</button></td></tr>
-                            <tr><td>BAT</td><td>159975.74023</td><td>5.8273600</td><td><button class="btn">Deposit</button>&nbsp;<button class="btn">Withdrawl</button></td></tr>
+                            <tr><td>XRP</td><td>344880</td><td>18.71848271</td><td><button class="btn">Deposit</button>&nbsp;<button class="btn modal-trigger" href="#modal1">Withdrawl</button></td></tr>
+                            <tr><td>SC</td><td>9150000</td><td>8.89768875</td><td><button class="btn">Deposit</button>&nbsp;<button class="btn modal-trigger" href="#modal1">Withdrawl</button></td></tr>
+                            <tr><td>ADA</td><td>280000</td><td>5.15645900</td><td><button class="btn">Deposit</button>&nbsp;<button class="btn modal-trigger" href="#modal1">Withdrawl</button></td></tr>
+                            <tr><td>BAT</td><td>159975.74023</td><td>5.8273600</td><td><button class="btn">Deposit</button>&nbsp;<button class="btn modal-trigger" href="#modal1">Withdrawl</button></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -140,13 +150,13 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                    <!-- Switch -->
+                        <%- data.otp_enabled?'<button class="btn" onclick="disabletwofa()" id="btn">DISABLE 2FA</button><div id="disable"></div>':'<button class="btn" onclick="twofa()" id="btn">Enable 2FA</button><div id="secretkey"></div>' %>
+                        
                 </div>
             </div>
-<!-- Switch -->
-        <!--    <button class="btn" onclick="twofa()" id="btn">Get 2FA</button>
-            <div id="secretkey"></div>
-            <button class="btn" onclick="disabletwofa()" id="btn">DISABLE 2FA</button>
-            <div id="disable"></div> -->
+
         </div>
     </div>
 
