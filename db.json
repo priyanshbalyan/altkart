@@ -24,33 +24,39 @@
             "otp_enabled": true,
             "wallet": [{
                     "currency": "BTC",
-                    "value": "",
-                    "quantity": ""
+                    "value": "12",
+                    "quantity": "",
+                    "address": " 1JcAoFP7Q2PtjrTYupqmfzxpCMC398NjFu"
                 },
                 {
                     "currency": "STEAM",
                     "value": "11.23",
-                    "quantity": "67315.950920"
+                    "quantity": "67315.950920",
+                    "address": "altkart_1"
                 },
                 {
                     "currency": "STRAT",
                     "value": "14.189",
-                    "quantity": "53264.932489"
+                    "quantity": "53264.932489",
+                    "address": "SNaNU4Qt5Uh2n1tMoYamHUZ3DqrdDaxjRs"
                 },
                 {
                     "currency": "ETH",
                     "value": "5.2347",
-                    "quantity": "91.89352"
+                    "quantity": "91.89352",
+                    "address": "0x62490b3526DC3F485Bd19eFbd1C9Aff640A51a4d"
                 },
                 {
                     "currency": "ETC",
                     "value": "8.2356",
-                    "quantity": "3466.24936709"
+                    "quantity": "3466.24936709",
+                    "address": "0xc038134a78f39103acdfaA24e49c1F999aCC900a"
                 },
                 {
                     "currency": "WAX",
                     "value": "6.3597",
-                    "quantity": "25676.12721091"
+                    "quantity": "25676.12721091",
+                    "address": "Wallet is not available"
                 }
             ],
             "deposit_history": [],
@@ -64,22 +70,26 @@
             "wallet": [{
                     "currency": "XRP",
                     "value": "18.71848271",
-                    "quantity": "344880"
+                    "quantity": "344880",
+                    "address": "rMuoSbCKTNrAuCnrxK39kkfe1cfuEH7q41"
                 },
                 {
                     "currency": "SC",
                     "value": "8.89768875",
-                    "quantity": "9150000"
+                    "quantity": "9150000",
+                    "address": "314b138146710e03efec8073b76886a9dd2ea000a063948b36fe1eb2405d75ad845a39e3b1dc"
                 },
                 {
                     "currency": "ADA",
                     "value": "5.15645900",
-                    "quantity": "280000"
+                    "quantity": "280000",
+                    "address": "DdzFFzCqrht31EmmQZ2gTLBqZGfrFs2bTzZbxDksgtdFZ2xBQYufwmVh8vq3b8bTfaaaEgupo3Uin1tmE6wqdxT4YTQ6mG6W3nvgPJqE"
                 },
                 {
                     "currency": "BAT",
                     "value": "5.8273600",
-                    "quantity": "159955.74023"
+                    "quantity": "159955.74023",
+                    "address": "0x62490b3526DC3F485Bd19eFbd1C9Aff640A51a4d"
                 }
             ],
             "deposit_history": [{
